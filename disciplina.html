@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expert Gaming | Disciplina</title>
+  <script src="assets/py/script.py"></script>
   <link rel="stylesheet" href="assets/css/style.css">
-
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/pesquisar.js"></script>
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
@@ -78,54 +80,23 @@
 
     <div class="div-center">
 
-      <h1 style="text-align: center;color: white; margin-bottom: 20px; color: #091C42;">Selecione um funcionário</h1>
+      <h1>Acionar Código Python</h1>
+    <button id="btnMostrarDataFrame">Mostrar DataFrame</button>
+    <div id="resultado"></div>
 
-      <div style=" margin: auto;">
-        <div class="dropdown">
-
-          <button style="margin: auto; margin-bottom: 30px;" class="btn btn-secondary dropdown-toggle" type="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            Selecionar Funcionário
-          </button>
-
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Ruan</a></li>
-            <li><a class="dropdown-item" href="#" id="Renan">Renan Marquetti</a></li>
-            <li><a class="dropdown-item" href="#" id="Thais">Thais Riffet</a></li>
-            <li><a class="dropdown-item" href="#" id="Nadine">Nadine Machine Tomaz Tavares</a></li>
-            <li><a class="dropdown-item" href="#" id="Evanise">Evanise Antonia Ribeiro</a></li>
-            <li><a class="dropdown-item" href="#" id="Firas">Firas El Najjar</a></li>
-            <li><a class="dropdown-item" href="#" id="Abel">Abel de Oliveira</a></li>
-            <li><a class="dropdown-item" href="#" id="Anderson">Anderson Jose Carvalho</a></li>
-            <li><a class="dropdown-item" href="#" id="Daniele">Daniele do Rocio Barbato</a></li>
-            <li><a class="dropdown-item" href="#" id="Josman">Josman Szeschtchuk</a></li>
-            <li><a class="dropdown-item" href="#" id="Mauricio">Mauricio Cordeiro</a></li>
-            <li><a class="dropdown-item" href="#" id="Raylan">Raylan de Oliveira</a></li>
-            <li><a class="dropdown-item" href="#" id="Sandra">Sandra Mara Lopes Soares</a></li>
-            <li><a class="dropdown-item" href="#" id="Daniele2">Daniele do Rocio Barbato</a></li>
-            <li><a class="dropdown-item" href="#" id="Rafael">Rafael Jose Santos Silva</a></li>
-            <li><a class="dropdown-item" href="#" id="Raphael">Raphael Di Marco Hartmann</a></li>
-            <li><a class="dropdown-item" href="#" id="Valdenei">Valdenei Menon</a></li>
-
-          </ul>
-
-        </div>
-      </div>
-      <button type="button" style="justify-content: center; margin: auto; display: flex; "
-        class="btn btn-primary">Pesquisar</button>
-
-    </div>
-
-    <div id="resultado">
-
-
-
-
-
-    </div>
-
-
-
+    <script>
+        document.getElementById('btnMostrarDataFrame').addEventListener('click', function() {
+            fetch('/mostrar_dataframe')
+                .then(response => response.json())
+                .then(data => {
+                    // Exibir o resultado no elemento com id 'resultado'
+                    document.getElementById('resultado').innerHTML = JSON.stringify(data);
+                })
+                .catch(error => console.error('Erro:', error));
+        });
+    </script>
+      
+      
   </main>
 
 
@@ -146,11 +117,11 @@
     <div>
       <a href="" class="text-white me-4">
         <i class="fab fa-facebook-f"></i>
+      </a>r"></i>
       </a>
+      <a href="" class="text-white
       <a href="" class="text-white me-4">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="text-white me-4">
+        <i class="fab fa-twitte me-4">
         <i class="fab fa-google"></i>
       </a>
       <a href="" class="text-white me-4">
